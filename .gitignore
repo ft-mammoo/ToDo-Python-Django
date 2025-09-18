@@ -1,0 +1,85 @@
+# Python
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+venv/
+env/
+.env/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static/
+staticfiles/
+celerybeat-schedule
+celerybeat.pid
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.settings/
+.project
+.pydevproject
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+bower_components/
+
+# Testing
+.coverage
+coverage/
+htmlcov/
+.tox/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+
+# Documentation
+docs/_build/
+site/
+
+# Environment
+.env
+.venv
+.python-version
+.env.local
+.env.*.local
+
+# Misc
+*.bak
+*.swp
+*.log
+logs/
+tmp/
+temp/
