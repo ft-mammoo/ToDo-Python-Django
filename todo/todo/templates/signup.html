@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignUp</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Font Awesome 5 Brands:wght@400&display=swap" />
+    </head>
+    <body>
+        <div class="signup-login">
+            <div class="signup-box1">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="heading">
+                        Login
+                    </div>
+                    <div class="line"></div>
+                    <div class="field">
+                        <b>Username</b>
+                        <input class="inp" type="text" name="fnm" required placeholder="Enter Your Username">
+                    </div>
+                    <div class="field">
+                        <b>Password</b>
+                        <input class="inp" type="password" name="pwd" required placeholder="Enter Password">
+                    </div>
+                    <div class="field">
+                        <input class="submit-button" type="submit" value="Login">
+                    </div>
+                    <div class="line"></div>
+                    <div class="field">
+                        <b style="margin-left:130px;">Don't have an account? </b>
+                        <br>
+                        <a class="anc" href="/signup">Signup</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
