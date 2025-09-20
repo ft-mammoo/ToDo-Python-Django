@@ -15,3 +15,5 @@ def signup(request):
         return redirect('/login')
     return render(request, 'signup.html')
 
+def login(request):
+    return render(request, 'login.html')
