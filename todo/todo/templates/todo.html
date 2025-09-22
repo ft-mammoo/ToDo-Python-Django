@@ -20,13 +20,15 @@
                 </div>
                 <div class=" signup-box scr">
                     <div class="heads">
-                        <div class="ancaa" title=""><i class="fa-solid fa-user"></i> </div> 
+                        <div class="ancaa" title="">
+                            <i class="fa-solid fa-user"></i>
+                        </div> 
                         <div class="heading">Get Things Done? </div>
                         <div class="anca">
-                            <a href="" class="sign">
-                                <iclass="fa-solid fa-right-from-bracket"></i>
+                            <a href="{% url 'logout' %}" class="sign">
+                                <i class="fa-solid fa-right-from-bracket"></i>
                             </a>
-                        </div>  
+                        </div>
                     </div>
                     <form method="POST">
                         {% csrf_token %}
