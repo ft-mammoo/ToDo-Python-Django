@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from todo import models
 from todo.models import ToDo
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
+from django.contrib.auth.decorators import login_required
 
 def signup(request):
 
@@ -28,6 +29,7 @@ def login(request):
             return redirect('/todo')
     return render(request, 'login.html')
 
+@login_required(login_url='/login')
 def todo(request):
     if request.method == 'POST':
         title = request.POST.get('title')
@@ -40,6 +42,7 @@ def todo(request):
     res = models.ToDo.objects.filter(user=request.user).order_by('-date')
     return render(request, 'todo.html' , {'res': res})
 
+@login_required(login_url='/login')
 def edit_todo(request, sn):
     if request.method == 'POST':
         title = request.POST.get('title')
@@ -52,6 +55,7 @@ def edit_todo(request, sn):
     obj = models.ToDo.objects.get(sn=sn)
     return render(request, 'edit_todo.html', {'obj': obj})
 
+@login_required(login_url='/login')
 def delete_todo(request, sn):
     obj = models.ToDo.objects.get(sn=sn)
     obj.delete()
