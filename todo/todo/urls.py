@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/', views.signup),
     path('login/', views.login),
-    path('todo/', views.todo)
+    path('todo/', views.todo),
+    path('edit_todo/<int:sn>/', views.edit_todo),
 ]

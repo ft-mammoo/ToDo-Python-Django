@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse
 from django.contrib.auth.models import User
 from todo import models
 from todo.models import ToDo
@@ -28,4 +29,25 @@ def login(request):
     return render(request, 'login.html')
 
 def todo(request):
-    return render(request, 'todo.html')
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        print(title)
+        obj = models.ToDo(title=title, user=request.user)
+        obj.save()
+        user = request.user
+        res = models.ToDo.objects.filter(user=request.user).order_by('-date')
+        return render(request, 'todo.html', {'res': res})
+    res = models.ToDo.objects.filter(user=request.user).order_by('-date')
+    return render(request, 'todo.html' , {'res': res})
+
+def edit_todo(request, sn):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        print(title)
+        obj = models.ToDo.objects.get(sn=sn)
+        obj.title = title
+        obj.save()
+        return redirect('/todo')
+
+    obj = models.ToDo.objects.get(sn=sn)
+    return render(request, 'edit_todo.html', {'obj': obj})
