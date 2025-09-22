@@ -41,8 +41,8 @@
                         </form>
                         <p class="{% if todo.status %} completed {% endif %} ">{{todo.title}}</p>
                         <div>
-                            <a href=" /edit_todo/{{todo.sn}} "><i class="fa-regular fa-pen-to-square"></i></a>
-                            <a href=" /delete_todo/{{todo.sn}} "><i class="fa-solid fa-trash"></i></a>
+                            <a href="/edit_todo/{{todo.sn}}"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="/delete_todo/{{todo.sn}}"><i class="fa-solid fa-trash"></i></a>
                         </div>
                     </div>
                     {% endfor %}

@@ -51,3 +51,8 @@ def edit_todo(request, sn):
 
     obj = models.ToDo.objects.get(sn=sn)
     return render(request, 'edit_todo.html', {'obj': obj})
+
+def delete_todo(request, sn):
+    obj = models.ToDo.objects.get(sn=sn)
+    obj.delete()
+    return redirect('/todo')
