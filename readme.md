@@ -79,7 +79,7 @@ Allows users to create, read, update, and delete to-do items via a web interface
     python manage.py runserver
     ```
     **Then open your browser and navigate to http://127.0.0.1:8000/**
-
+---
 
 
 ## Contributing
@@ -95,3 +95,4 @@ Allows users to create, read, update, and delete to-do items via a web interface
 - **Add tests, better error handling, or documentation**
 
 ****Please adhere to code style and provide descriptive commit message****
+---
