@@ -4,3 +4,4 @@ python-dotenv
 django-crispy-forms
 pillow
 gunicorn
+whitenose
