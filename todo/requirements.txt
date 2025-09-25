@@ -1,0 +1,6 @@
+Django
+django-environ
+python-dotenv
+django-crispy-forms
+pillow
+gunicorn
