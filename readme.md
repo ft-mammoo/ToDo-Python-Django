@@ -11,6 +11,14 @@ Allows users to create, read, update, and delete to-do items via a web interface
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ---
+
+## Live Demo (Deployed App)
+**Experience the application instantly! Click the link below to interact with the live, deployed version of the To-Do application.**
+
+
+🔗  **[Live Demo Link](https://todo-slbw.onrender.com/)**
+
+---
 ## Features
 
 - Add new to-do items  
